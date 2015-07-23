@@ -11,6 +11,7 @@ collectd:
           user: user
           pass: pass
     dbi:
+      interval: 10 # seconds
       queries:
         - name: mysql_user_connections
           statement: SELECT user, count(*) as nof_connections FROM information_schema.processlist GROUP BY user
